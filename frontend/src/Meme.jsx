@@ -5,8 +5,8 @@ function Meme() {
     const [tab, setTab] = useState("editor");
     const [image, setImage] = useState(null);
     const [text, setText] = useState([
-        { id: 1, text: "TEXTE DU HAUT", x: 0.5, y: 0.08, fontSize: 48, color: "#FFFFFF", stroke: "#000000", font: "Impact", align: "center" },
-        { id: 2, text: "TEXTE DU BAS", x: 0.5, y: 0.92, fontSize: 48, color: "#FFFFFF", stroke: "#000000", font: "Impact", align: "center" }
+        { id: 1, text: "TEXTE DU HAUT", x: 0.5, y: 0.2, fontSize: 38, color: "#FFFFFF", stroke: "#000000", font: "Impact", align: "center" },
+        { id: 2, text: "TEXTE DU BAS", x: 0.5, y: 0.85, fontSize: 38, color: "#FFFFFF", stroke: "#000000", font: "Impact", align: "center" }
     ]);
     const [selectedId, setSelectedId] = useState(1);
     const [gallery, setGallery] = useState([]);
@@ -14,7 +14,6 @@ function Meme() {
     const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
     const [isDragOver, setIsDragOver] = useState(false);
     const canvasRef = useRef(null);
-    // const previewRef = useRef(null);
     const fileInputRef = useRef(null);
     const imgRef = useRef(null);
 
@@ -162,12 +161,12 @@ function Meme() {
                     files: [file],
                 });
             } catch {
-                alert("Sharing failed. Copying link to clipboard instead.");
+                alert("Partage non supporté, lien copié dans le presse-papiers !");
                 navigator.clipboard.writeText(window.location.origin + url);
             }
         } else {
             navigator.clipboard.writeText(window.location.href);
-            alert("Link copied to clipboard!");
+            alert("Lien copié dans le presse-papiers !");
         }
     };
 
