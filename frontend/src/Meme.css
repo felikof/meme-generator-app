@@ -1,7 +1,7 @@
 /* Meme.css */
 :root {
-  --bg-color: #0f172a;
-  --card-bg: #1e293b;
+  --bg-color: #9ed6ff;
+  --card-bg: #425472;
   --accent-color: #6366f1;
   --accent-hover: #4f46e5;
   --text-main: #f8fafc;
@@ -11,6 +11,7 @@
 
 .meme-container {
   min-height: 100vh;
+  width: 100%;
   background-color: var(--bg-color);
   color: var(--text-main);
   font-family: 'Inter', system-ui, sans-serif;
@@ -51,7 +52,7 @@
   grid-template-columns: 1fr 350px;
   gap: 30px;
   padding: 30px;
-  max-width: 1200px;
+  max-width: 1050px;
   margin: 0 auto;
   width: 100%;
 }
@@ -65,7 +66,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #000;
+  background: #000000;
+  color: black;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -78,6 +80,7 @@ canvas {
   max-width: 100%;
   max-height: 70vh;
   cursor: crosshair;
+  margin: 20px;
 }
 
 .dropzone-overlay {
@@ -119,9 +122,20 @@ input[type="text"], input[type="number"] {
   background: #0f172a;
   border: 1px solid #334155;
   color: white;
+  text-align: center;
   padding: 12px;
   border-radius: 8px;
   outline: none;
+}
+
+input[type="color"] {
+  border: 1px solid #334155;
+  width: 60px;
+  height: 40px;
+  border-radius: 7px;
+  border: none;
+  margin: 2px;
+  cursor: pointer;
 }
 
 .color-grid {
